@@ -1,0 +1,11 @@
+type Department @model {
+  id: ID!
+  name: String
+  manager: Employee @connection
+}
+
+type Employee @model {
+  id: ID!
+  name: String
+  age: Int
+}
