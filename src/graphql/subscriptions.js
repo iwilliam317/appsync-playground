@@ -1,69 +1,171 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const onCreateDepartment = /* GraphQL */ `
-  subscription OnCreateDepartment {
-    onCreateDepartment {
+export const onCreateBlog = /* GraphQL */ `
+  subscription OnCreateBlog {
+    onCreateBlog {
       id
       name
-      manager {
-        id
-        name
-        age
+      posts {
+        items {
+          id
+          title
+        }
+        nextToken
       }
     }
   }
 `;
-export const onUpdateDepartment = /* GraphQL */ `
-  subscription OnUpdateDepartment {
-    onUpdateDepartment {
+export const onUpdateBlog = /* GraphQL */ `
+  subscription OnUpdateBlog {
+    onUpdateBlog {
       id
       name
-      manager {
-        id
-        name
-        age
+      posts {
+        items {
+          id
+          title
+        }
+        nextToken
       }
     }
   }
 `;
-export const onDeleteDepartment = /* GraphQL */ `
-  subscription OnDeleteDepartment {
-    onDeleteDepartment {
+export const onDeleteBlog = /* GraphQL */ `
+  subscription OnDeleteBlog {
+    onDeleteBlog {
       id
       name
-      manager {
-        id
-        name
-        age
+      posts {
+        items {
+          id
+          title
+        }
+        nextToken
       }
     }
   }
 `;
-export const onCreateEmployee = /* GraphQL */ `
-  subscription OnCreateEmployee {
-    onCreateEmployee {
+export const onCreatePost = /* GraphQL */ `
+  subscription OnCreatePost {
+    onCreatePost {
       id
-      name
-      age
+      title
+      blog {
+        id
+        name
+        posts {
+          nextToken
+        }
+      }
+      comments {
+        items {
+          id
+          content
+        }
+        nextToken
+      }
     }
   }
 `;
-export const onUpdateEmployee = /* GraphQL */ `
-  subscription OnUpdateEmployee {
-    onUpdateEmployee {
+export const onUpdatePost = /* GraphQL */ `
+  subscription OnUpdatePost {
+    onUpdatePost {
       id
-      name
-      age
+      title
+      blog {
+        id
+        name
+        posts {
+          nextToken
+        }
+      }
+      comments {
+        items {
+          id
+          content
+        }
+        nextToken
+      }
     }
   }
 `;
-export const onDeleteEmployee = /* GraphQL */ `
-  subscription OnDeleteEmployee {
-    onDeleteEmployee {
+export const onDeletePost = /* GraphQL */ `
+  subscription OnDeletePost {
+    onDeletePost {
       id
-      name
-      age
+      title
+      blog {
+        id
+        name
+        posts {
+          nextToken
+        }
+      }
+      comments {
+        items {
+          id
+          content
+        }
+        nextToken
+      }
+    }
+  }
+`;
+export const onCreateComment = /* GraphQL */ `
+  subscription OnCreateComment {
+    onCreateComment {
+      id
+      content
+      post {
+        id
+        title
+        blog {
+          id
+          name
+        }
+        comments {
+          nextToken
+        }
+      }
+    }
+  }
+`;
+export const onUpdateComment = /* GraphQL */ `
+  subscription OnUpdateComment {
+    onUpdateComment {
+      id
+      content
+      post {
+        id
+        title
+        blog {
+          id
+          name
+        }
+        comments {
+          nextToken
+        }
+      }
+    }
+  }
+`;
+export const onDeleteComment = /* GraphQL */ `
+  subscription OnDeleteComment {
+    onDeleteComment {
+      id
+      content
+      post {
+        id
+        title
+        blog {
+          id
+          name
+        }
+        comments {
+          nextToken
+        }
+      }
     }
   }
 `;

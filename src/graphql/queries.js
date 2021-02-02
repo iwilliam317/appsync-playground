@@ -1,59 +1,116 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const getDepartment = /* GraphQL */ `
-  query GetDepartment($id: ID!) {
-    getDepartment(id: $id) {
+export const getBlog = /* GraphQL */ `
+  query GetBlog($id: ID!) {
+    getBlog(id: $id) {
       id
       name
-      manager {
-        id
-        name
-        age
+      posts {
+        items {
+          id
+          title
+        }
+        nextToken
       }
     }
   }
 `;
-export const listDepartments = /* GraphQL */ `
-  query ListDepartments(
-    $filter: ModelDepartmentFilterInput
+export const listBlogs = /* GraphQL */ `
+  query ListBlogs(
+    $filter: ModelBlogFilterInput
     $limit: Int
     $nextToken: String
   ) {
-    listDepartments(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    listBlogs(filter: $filter, limit: $limit, nextToken: $nextToken) {
       items {
         id
         name
-        manager {
-          id
-          name
-          age
+        posts {
+          nextToken
         }
       }
       nextToken
     }
   }
 `;
-export const getEmployee = /* GraphQL */ `
-  query GetEmployee($id: ID!) {
-    getEmployee(id: $id) {
+export const getPost = /* GraphQL */ `
+  query GetPost($id: ID!) {
+    getPost(id: $id) {
       id
-      name
-      age
+      title
+      blog {
+        id
+        name
+        posts {
+          nextToken
+        }
+      }
+      comments {
+        items {
+          id
+          content
+        }
+        nextToken
+      }
     }
   }
 `;
-export const listEmployees = /* GraphQL */ `
-  query ListEmployees(
-    $filter: ModelEmployeeFilterInput
+export const listPosts = /* GraphQL */ `
+  query ListPosts(
+    $filter: ModelPostFilterInput
     $limit: Int
     $nextToken: String
   ) {
-    listEmployees(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    listPosts(filter: $filter, limit: $limit, nextToken: $nextToken) {
       items {
         id
-        name
-        age
+        title
+        blog {
+          id
+          name
+        }
+        comments {
+          nextToken
+        }
+      }
+      nextToken
+    }
+  }
+`;
+export const getComment = /* GraphQL */ `
+  query GetComment($id: ID!) {
+    getComment(id: $id) {
+      id
+      content
+      post {
+        id
+        title
+        blog {
+          id
+          name
+        }
+        comments {
+          nextToken
+        }
+      }
+    }
+  }
+`;
+export const listComments = /* GraphQL */ `
+  query ListComments(
+    $filter: ModelCommentFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listComments(filter: $filter, limit: $limit, nextToken: $nextToken) {
+      items {
+        id
+        content
+        post {
+          id
+          title
+        }
       }
       nextToken
     }

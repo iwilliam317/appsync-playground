@@ -1,87 +1,198 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const createDepartment = /* GraphQL */ `
-  mutation CreateDepartment(
-    $input: CreateDepartmentInput!
-    $condition: ModelDepartmentConditionInput
+export const createBlog = /* GraphQL */ `
+  mutation CreateBlog(
+    $input: CreateBlogInput!
+    $condition: ModelBlogConditionInput
   ) {
-    createDepartment(input: $input, condition: $condition) {
+    createBlog(input: $input, condition: $condition) {
       id
       name
-      manager {
-        id
-        name
-        age
+      posts {
+        items {
+          id
+          title
+        }
+        nextToken
       }
     }
   }
 `;
-export const updateDepartment = /* GraphQL */ `
-  mutation UpdateDepartment(
-    $input: UpdateDepartmentInput!
-    $condition: ModelDepartmentConditionInput
+export const updateBlog = /* GraphQL */ `
+  mutation UpdateBlog(
+    $input: UpdateBlogInput!
+    $condition: ModelBlogConditionInput
   ) {
-    updateDepartment(input: $input, condition: $condition) {
+    updateBlog(input: $input, condition: $condition) {
       id
       name
-      manager {
-        id
-        name
-        age
+      posts {
+        items {
+          id
+          title
+        }
+        nextToken
       }
     }
   }
 `;
-export const deleteDepartment = /* GraphQL */ `
-  mutation DeleteDepartment(
-    $input: DeleteDepartmentInput!
-    $condition: ModelDepartmentConditionInput
+export const deleteBlog = /* GraphQL */ `
+  mutation DeleteBlog(
+    $input: DeleteBlogInput!
+    $condition: ModelBlogConditionInput
   ) {
-    deleteDepartment(input: $input, condition: $condition) {
+    deleteBlog(input: $input, condition: $condition) {
       id
       name
-      manager {
-        id
-        name
-        age
+      posts {
+        items {
+          id
+          title
+        }
+        nextToken
       }
     }
   }
 `;
-export const createEmployee = /* GraphQL */ `
-  mutation CreateEmployee(
-    $input: CreateEmployeeInput!
-    $condition: ModelEmployeeConditionInput
+export const createPost = /* GraphQL */ `
+  mutation CreatePost(
+    $input: CreatePostInput!
+    $condition: ModelPostConditionInput
   ) {
-    createEmployee(input: $input, condition: $condition) {
+    createPost(input: $input, condition: $condition) {
       id
-      name
-      age
+      title
+      blog {
+        id
+        name
+        posts {
+          nextToken
+        }
+      }
+      comments {
+        items {
+          id
+          content
+        }
+        nextToken
+      }
     }
   }
 `;
-export const updateEmployee = /* GraphQL */ `
-  mutation UpdateEmployee(
-    $input: UpdateEmployeeInput!
-    $condition: ModelEmployeeConditionInput
+export const updatePost = /* GraphQL */ `
+  mutation UpdatePost(
+    $input: UpdatePostInput!
+    $condition: ModelPostConditionInput
   ) {
-    updateEmployee(input: $input, condition: $condition) {
+    updatePost(input: $input, condition: $condition) {
       id
-      name
-      age
+      title
+      blog {
+        id
+        name
+        posts {
+          nextToken
+        }
+      }
+      comments {
+        items {
+          id
+          content
+        }
+        nextToken
+      }
     }
   }
 `;
-export const deleteEmployee = /* GraphQL */ `
-  mutation DeleteEmployee(
-    $input: DeleteEmployeeInput!
-    $condition: ModelEmployeeConditionInput
+export const deletePost = /* GraphQL */ `
+  mutation DeletePost(
+    $input: DeletePostInput!
+    $condition: ModelPostConditionInput
   ) {
-    deleteEmployee(input: $input, condition: $condition) {
+    deletePost(input: $input, condition: $condition) {
       id
-      name
-      age
+      title
+      blog {
+        id
+        name
+        posts {
+          nextToken
+        }
+      }
+      comments {
+        items {
+          id
+          content
+        }
+        nextToken
+      }
+    }
+  }
+`;
+export const createComment = /* GraphQL */ `
+  mutation CreateComment(
+    $input: CreateCommentInput!
+    $condition: ModelCommentConditionInput
+  ) {
+    createComment(input: $input, condition: $condition) {
+      id
+      content
+      post {
+        id
+        title
+        blog {
+          id
+          name
+        }
+        comments {
+          nextToken
+        }
+      }
+    }
+  }
+`;
+export const updateComment = /* GraphQL */ `
+  mutation UpdateComment(
+    $input: UpdateCommentInput!
+    $condition: ModelCommentConditionInput
+  ) {
+    updateComment(input: $input, condition: $condition) {
+      id
+      content
+      post {
+        id
+        title
+        blog {
+          id
+          name
+        }
+        comments {
+          nextToken
+        }
+      }
+    }
+  }
+`;
+export const deleteComment = /* GraphQL */ `
+  mutation DeleteComment(
+    $input: DeleteCommentInput!
+    $condition: ModelCommentConditionInput
+  ) {
+    deleteComment(input: $input, condition: $condition) {
+      id
+      content
+      post {
+        id
+        title
+        blog {
+          id
+          name
+        }
+        comments {
+          nextToken
+        }
+      }
     }
   }
 `;

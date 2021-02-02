@@ -1,9 +1,10 @@
 {
 	"auth": {
-		"appsyncplayground79ce2894": {
+		"appsyncplayground14b23cf9": {
 			"service": "Cognito",
 			"providerPlugin": "awscloudformation",
-			"dependsOn": []
+			"dependsOn": [],
+			"customAuth": false
 		}
 	},
 	"api": {
@@ -16,7 +17,7 @@
 					"defaultAuthentication": {
 						"authenticationType": "AMAZON_COGNITO_USER_POOLS",
 						"userPoolConfig": {
-							"userPoolId": "authappsyncplayground79ce2894"
+							"userPoolId": "authappsyncplayground14b23cf9"
 						}
 					}
 				}

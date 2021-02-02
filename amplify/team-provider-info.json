@@ -1,19 +1,19 @@
 {
     "dev": {
         "awscloudformation": {
-            "AuthRoleName": "amplify-appsync-playground-dev-113018-authRole",
-            "UnauthRoleArn": "arn:aws:iam::176033481166:role/amplify-appsync-playground-dev-113018-unauthRole",
-            "AuthRoleArn": "arn:aws:iam::176033481166:role/amplify-appsync-playground-dev-113018-authRole",
+            "AuthRoleName": "amplify-appsync-playground-dev-152939-authRole",
+            "UnauthRoleArn": "arn:aws:iam::176033481166:role/amplify-appsync-playground-dev-152939-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::176033481166:role/amplify-appsync-playground-dev-152939-authRole",
             "Region": "eu-west-1",
-            "DeploymentBucketName": "amplify-appsync-playground-dev-113018-deployment",
-            "UnauthRoleName": "amplify-appsync-playground-dev-113018-unauthRole",
-            "StackName": "amplify-appsync-playground-dev-113018",
-            "StackId": "arn:aws:cloudformation:eu-west-1:176033481166:stack/amplify-appsync-playground-dev-113018/a146a2b0-25a3-11eb-98d5-0602493dba4d",
-            "AmplifyAppId": "d39l4ds8w6cm5l"
+            "DeploymentBucketName": "amplify-appsync-playground-dev-152939-deployment",
+            "UnauthRoleName": "amplify-appsync-playground-dev-152939-unauthRole",
+            "StackName": "amplify-appsync-playground-dev-152939",
+            "StackId": "arn:aws:cloudformation:eu-west-1:176033481166:stack/amplify-appsync-playground-dev-152939/5ed7bea0-30c5-11eb-ac6f-0a7fc4da8782",
+            "AmplifyAppId": "d2ga7qg9r09w2b"
         },
         "categories": {
             "auth": {
-                "appsyncplayground79ce2894": {}
+                "appsyncplayground14b23cf9": {}
             }
         }
     }

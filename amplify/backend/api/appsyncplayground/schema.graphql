@@ -1,11 +1,16 @@
-type Department @model {
+type Blog @model {
   id: ID!
-  name: String
-  manager: Employee @connection
+  name: String!
+  posts: [Post] @connection(name: "BlogPosts")
 }
-
-type Employee @model {
+type Post @model {
   id: ID!
-  name: String
-  age: Int
+  title: String!
+  blog: Blog @connection(name: "BlogPosts")
+  comments: [Comment] @connection(name: "PostComments")
+}
+type Comment @model {
+  id: ID!
+  content: String
+  post: Post @connection(name: "PostComments")
 }
